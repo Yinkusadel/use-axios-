@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import axios from 'axios';
+import axios, { AxiosError } from 'axios';
 
 interface UseAxiosConfig {
     method: 'GET' | 'POST' | 'PUT' | 'DELETE';
@@ -55,11 +55,15 @@ export default function useAxios() {
                 signal: controller.signal
             })
             setResponse(result.data)
-        } catch (error: any) {
+        } catch (error) {
             if (axios.isCancel(error)) {
-                console.error("Request cancelled", error.message)
+                console.error("Request cancelled:", error.message);
+            } else if (error instanceof AxiosError) {
+                const errorMessage = error.response ? error.response.data : error.message;
+                setError(errorMessage);
             } else {
-                setError(error.response ? error.data : error.message)
+                setError("An unexpected error occurred.");
+                console.error("Unexpected error:", error);
             }
         } finally {
             setLoading(false)
