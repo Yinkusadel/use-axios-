@@ -1,7 +1,8 @@
 // import TestAxiosComponent from "./components/axios";
 // import UseCallBackComponent from "./components/usecallback";
+// import UseMemoComponent from "./components/usememo";
 
-import UseMemoComponent from "./components/usememo";
+import UseRefComponent from "./components/useref";
 
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
     <main>
       {/* <TestAxiosComponent/> */}
       {/* <UseCallBackComponent /> */}
-      <UseMemoComponent />
+      {/* <UseMemoComponent /> */}
+      <UseRefComponent />
     </main>
   );
 }
