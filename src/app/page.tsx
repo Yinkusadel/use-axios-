@@ -2,8 +2,9 @@
 // import UseCallBackComponent from "./components/usecallback";
 // import UseMemoComponent from "./components/usememo";
 // import UseRefComponent from "./components/useref";
+// import UseReducerComponent from "./components/usereducer";
 
-import UseReducerComponent from "./components/usereducer";
+import UseLayoutEffectComponent from "./components/uselayouteffect";
 
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
       {/* <UseCallBackComponent /> */}
       {/* <UseMemoComponent /> */}
       {/* <UseRefComponent /> */}
-      <UseReducerComponent />
+      {/* <UseReducerComponent /> */}
+      <UseLayoutEffectComponent />
     </main>
   );
 }
