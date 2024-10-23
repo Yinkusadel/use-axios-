@@ -3,8 +3,9 @@
 // import UseMemoComponent from "./components/usememo";
 // import UseRefComponent from "./components/useref";
 // import UseReducerComponent from "./components/usereducer";
+// import UseLayoutEffectComponent from "./components/uselayouteffect";
 
-import UseLayoutEffectComponent from "./components/uselayouteffect";
+import UseImperativeHandleComponent from "./components/useimperativehandle/useimperativehandle";
 
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
       {/* <UseMemoComponent /> */}
       {/* <UseRefComponent /> */}
       {/* <UseReducerComponent /> */}
-      <UseLayoutEffectComponent />
+      {/* <UseLayoutEffectComponent /> */}
+      <UseImperativeHandleComponent />
     </main>
   );
 }
